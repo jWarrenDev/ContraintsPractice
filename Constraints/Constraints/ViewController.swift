@@ -35,7 +35,7 @@ class ViewController: UIViewController {
                                                 constant: 200.0)
         
         // greenSquare height is equal to the greenSquare width
-        // gSh = 1.0 * gSW + 0; basically like y = mx + b - Linear Algebra 
+        // gSh = 1.0 * gSW + 0; basically like y = mx + b - Linear Algebra
         let heightConstraint = NSLayoutConstraint(item: greenSquare,
                                                   attribute: .height,
                                                   relatedBy: .equal,
@@ -62,6 +62,12 @@ class ViewController: UIViewController {
         
         // needs to be in an array
         NSLayoutConstraint.activate([heightConstraint, widthConstraint, centerYConstraint, centerXConstraint])
+        
+        
+        // add a 2nd purlple view Below green line
+        // same width, centered horizontally
+        // space below green square margin 10 points
+        
         
     }
 
