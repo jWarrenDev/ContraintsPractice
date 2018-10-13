@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         greenSquare.backgroundColor = .green
         view.addSubview(greenSquare)
  
-        // lets write are 4 constraints
+        // lets write all 4 constraints
         // Width, Height, CenterY, CenterX
         // Then we are going to activate them and pass them in
         
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
                                                 constant: 200.0)
         
         // greenSquare height is equal to the greenSquare width
-        // gSh = 1.0 * gSW + 0
+        // gSh = 1.0 * gSW + 0; basically like y = mx + b - Linear Algebra
         let heightConstraint = NSLayoutConstraint(item: greenSquare,
                                                   attribute: .height,
                                                   relatedBy: .equal,
