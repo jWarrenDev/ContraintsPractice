@@ -74,6 +74,7 @@ class ViewController: UIViewController {
         purpleSquare.backgroundColor = .purple
         view.addSubview(purpleSquare)
         
+        // make the purple squares top, equal to greenSquare bottom, + 10
         let topConstraintP = NSLayoutConstraint(item: purpleSquare,
                                                  attribute: .top,
                                                  relatedBy: .equal,
@@ -82,13 +83,14 @@ class ViewController: UIViewController {
                                                  multiplier: 1.0,
                                                  constant: 10.0)
         
-        let bottomConstraintP = NSLayoutConstraint(item: view,
+        // make the purple squares bottom, equal to the view bottom , - 10
+        let bottomConstraintP = NSLayoutConstraint(item: purpleSquare,
                                                   attribute: .bottom,
                                                   relatedBy: .equal,
-                                                  toItem: purpleSquare,
+                                                  toItem: view,
                                                   attribute: .bottom,
                                                   multiplier: 1.0,
-                                                  constant: 10.0)
+                                                  constant: -10.0)
         
         let widthConstraintP = NSLayoutConstraint(item: purpleSquare,
                                                    attribute: .width,
@@ -109,6 +111,9 @@ class ViewController: UIViewController {
         // needs to be passed in as param
         NSLayoutConstraint.activate([topConstraintP, bottomConstraintP, widthConstraintP, centerConstraintP])
     }
-
+    // TODO: Build Four Squares equal Width / Height on View.
+    // Equal Spacing btw them all 
+    
+    
 }
 
