@@ -98,16 +98,16 @@ class ViewController: UIViewController {
                                                    multiplier: 1.0,
                                                    constant: 0.0)
         
-        let heightConstraintP = NSLayoutConstraint(item: purpleSquare,
-                                                   attribute: .height,
+        let centerConstraintP = NSLayoutConstraint(item: purpleSquare,
+                                                   attribute: .centerX,
                                                    relatedBy: .equal,
-                                                   toItem: greenSquare,
-                                                   attribute: .height,
+                                                   toItem: view,
+                                                   attribute: .centerX,
                                                    multiplier: 1.0,
                                                    constant: 0.0)
         
         // needs to be passed in as param
-        NSLayoutConstraint.activate([topConstraintP, bottomConstraintP, widthConstraintP, heightConstraintP])
+        NSLayoutConstraint.activate([topConstraintP, bottomConstraintP, widthConstraintP, centerConstraintP])
     }
 
 }
